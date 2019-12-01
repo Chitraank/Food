@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,13 +8,50 @@
     android:orientation="vertical"
     tools:context=".Menu_items">
 
+    <LinearLayout
+        android:id="@+id/layout_day"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/path4">
+
+        <ImageView
+            android:contentDescription="@string/suggestions_text"
+            android:id="@+id/issue_symbol"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/issue"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/issue_type_text"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/monday"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_breakfast_item"
+        android:layout_below="@+id/layout_day"
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
@@ -64,6 +101,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_lunch_item"
+        android:layout_below="@+id/card_breakfast_item"
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         android:layout_marginStart="16dp"
@@ -118,6 +156,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_snacks_item"
+        android:layout_below="@+id/card_lunch_item"
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         android:layout_marginStart="16dp"
@@ -172,6 +211,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_dinner_item"
+        android:layout_below="@+id/card_snacks_item"
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         android:layout_marginStart="16dp"
@@ -223,4 +263,33 @@
                 android:textStyle="normal" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-</LinearLayout>
+
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient2"
+        android:text="@string/back"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/home_btn"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:background="@drawable/gradient2"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/back_btn"
+        android:text="@string/home"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+               />
+
+</RelativeLayout>

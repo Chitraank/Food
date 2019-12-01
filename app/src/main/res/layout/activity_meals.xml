@@ -88,7 +88,7 @@
                     android:textSize="20sp"
                     android:layout_toEndOf="@+id/image_food"
                     android:layout_centerVertical="true"
-                    android:textStyle="bold"
+                    android:textStyle="normal"
                     android:layout_gravity="center_vertical"
                     android:textAllCaps="false"
                     android:textColor="@color/peach"/>
@@ -138,7 +138,7 @@
                     android:textSize="20sp"
                     android:layout_toEndOf="@+id/image_lunch"
                     android:layout_centerVertical="true"
-                    android:textStyle="bold"
+                    android:textStyle="normal"
                     android:layout_gravity="center_vertical"
                     android:textAllCaps="false"
                     android:textColor="@color/peach"/>
@@ -188,7 +188,7 @@
                     android:textSize="20sp"
                     android:layout_toEndOf="@+id/image_snacks"
                     android:layout_centerVertical="true"
-                    android:textStyle="bold"
+                    android:textStyle="normal"
                     android:layout_gravity="center_vertical"
                     android:textAllCaps="false"
                     android:textColor="@color/peach"/>
@@ -239,7 +239,7 @@
                     android:textSize="20sp"
                     android:layout_toEndOf="@+id/image_dinner"
                     android:layout_centerVertical="true"
-                    android:textStyle="bold"
+                    android:textStyle="normal"
                     android:layout_gravity="center_vertical"
                     android:textAllCaps="false"
                     android:textColor="@color/peach"/>
@@ -256,5 +256,33 @@
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/edit_meals"
+            android:layout_width="210dp"
+            android:layout_height="60dp"
+            android:background="@drawable/gradient2"
+            android:text="@string/edit"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            />
+
+        <Button
+            android:id="@+id/submit_meals"
+            android:layout_width="210dp"
+            android:layout_height="60dp"
+            android:background="@drawable/gradient2"
+            android:text="@string/submit"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/edit_meals"
+            />
+
     </RelativeLayout>
 </ScrollView>
