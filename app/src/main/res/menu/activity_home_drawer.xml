@@ -10,11 +10,11 @@
             android:title="@string/dashboard" />
         <item
             android:id="@+id/nav_meals"
-            android:icon="@drawable/home_grey"
+            android:icon="@drawable/meals"
             android:title="@string/meals" />
         <item
             android:id="@+id/nav_menu"
-            android:icon="@drawable/home_grey"
+            android:icon="@drawable/menu"
             android:title="@string/menu" />
 
     </group>
@@ -23,11 +23,11 @@
         <menu>
             <item
                 android:id="@+id/nav_feedback"
-                android:icon="@drawable/home_grey"
+                android:icon="@drawable/feedback"
                 android:title="@string/feedback" />
             <item
                 android:id="@+id/nav_suggestions"
-                android:icon="@drawable/home_grey"
+                android:icon="@drawable/suggestions"
                 android:title="@string/suggestions" />
         </menu>
     </item>
