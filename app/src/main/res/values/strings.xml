@@ -46,6 +46,7 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="rno">Roll Number</string>
+
     <string name="room_no">Room Number</string>
     <string name="select_meal">Select your meal for the day</string>
     <string name="dashboard">Dashboard</string>
@@ -61,9 +62,10 @@
     <string name="sunday">Sunday</string>
     <string name="tuesday">Tuesday</string>
     <string name="friday">Friday</string>
-    <string name="item_1">Pao Bhaji</string>
-
-    <string name="hostel">Hostel</string>
-
+    <string name="item_1">Pao Bhaji, Tea, Milk</string>
+    <string name="item_2">Rajma, Rice, Roti, Aaloo Sabzi, Raita</string>
+    <string name="item_3">Samosa, Tea, Coffee</string>
+    <string name="item_4">Dal, Rice, Roti, Paneer Sabzi, Icecream</string>
     <string name="branch">Branch</string>
+    <string name="hostel">Hostel</string>
 </resources>

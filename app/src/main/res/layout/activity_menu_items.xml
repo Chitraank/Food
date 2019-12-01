@@ -8,9 +8,219 @@
     android:orientation="vertical"
     tools:context=".Menu_items">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu_items"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_breakfast_item"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_food"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/food3"/>
+
+            <TextView
+                android:id="@+id/breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/breakfast"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/image_food"
+                android:gravity="top"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:textAllCaps="true"
+                android:textColor="@color/peach"/>
+
+            <TextView
+                android:id="@+id/breakfast_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/item_1"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/image_food"
+                android:layout_below="@id/breakfast"
+                android:gravity="top"
+                android:textStyle="normal"
+                android:layout_gravity="center_vertical"
+                android:textAllCaps="false"
+                android:textColor="@color/peach"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_lunch_item"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_lunch"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/food5"/>
+
+            <TextView
+                android:id="@+id/lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/lunch"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/image_lunch"
+                android:gravity="top"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:textAllCaps="true"
+                android:textColor="@color/peach"/>
+
+            <TextView
+                android:id="@+id/lunch_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/item_2"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/image_lunch"
+                android:layout_below="@id/lunch"
+                android:gravity="top"
+                android:textStyle="normal"
+                android:layout_gravity="center_vertical"
+                android:textAllCaps="false"
+                android:textColor="@color/peach"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_snacks_item"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_snacks"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/burger"/>
+
+            <TextView
+                android:id="@+id/snacks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/snacks"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/image_snacks"
+                android:gravity="top"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:textAllCaps="true"
+                android:textColor="@color/peach"/>
+
+            <TextView
+                android:id="@+id/snacks_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/item_3"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/image_snacks"
+                android:layout_below="@id/snacks"
+                android:gravity="top"
+                android:textStyle="normal"
+                android:layout_gravity="center_vertical"
+                android:textAllCaps="false"
+                android:textColor="@color/peach"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_dinner_item"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_dinner"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/food4" />
+
+            <TextView
+                android:id="@+id/dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/image_dinner"
+                android:gravity="top"
+                android:text="@string/dinner"
+                android:textAllCaps="true"
+                android:textColor="@color/peach"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dinner_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dinner"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/image_dinner"
+                android:gravity="top"
+                android:text="@string/item_4"
+                android:textAllCaps="false"
+                android:textColor="@color/peach"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
