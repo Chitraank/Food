@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Suggestions"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <View
+            android:id="@+id/main_view"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/gradient2"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:contentDescription="@string/suggestions_text"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/food3"/>
+        <TextView
+            android:id="@+id/suggest"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:text="@string/suggestions_text"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/improve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:text="@string/improve"
+            android:textColor="@color/white"
+            android:layout_below="@+id/suggest"
+            android:layout_alignParentEnd="true"
+            />
+
+        <LinearLayout
+            android:id="@+id/layout_suggestion_title"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:contentDescription="@string/suggestions_text"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/create"
+                android:layout_gravity="center_vertical"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_layout_suggestion_title"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/suggestion_title"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/yellow"
+                    android:inputType="text"
+                    android:textSize="20sp"
+                    android:hint="@string/suggestion_title"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_suggestion"
+            android:layout_below="@+id/layout_suggestion_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:contentDescription="@string/suggestions_text"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/create"
+                android:layout_gravity="center_vertical"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_layout_suggestion"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/suggestion"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/yellow"
+                    android:inputType="textMultiLine"
+                    android:textSize="20sp"
+                    android:hint="@string/suggestions_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_issue_type"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/path4"
+            android:layout_below="@+id/layout_suggestion">
+
+            <ImageView
+                android:contentDescription="@string/suggestions_text"
+                android:id="@+id/issue_symbol"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/issue"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/issue_type_text"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/issue_type"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_grp_issue_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/layout_issue_type">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/cleanliness"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/staff"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/food_quality"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/ambience"
+                />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/layout_overall_experience"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/path4"
+            android:layout_below="@+id/radio_grp_issue_type">
+
+            <ImageView
+                android:contentDescription="@string/suggestions_text"
+                android:id="@+id/experience_symbol"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/issue"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/experience_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/overall_experience"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_express"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/layout_overall_experience">
+
+            <ImageView
+                android:contentDescription="@string/suggestions_text"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/mood_happy"
+                android:layout_margin="25dp"
+                android:id="@+id/happy"/>
+
+
+
+            <ImageView
+                android:contentDescription="@string/suggestions_text"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/mood_satisfy"
+                android:layout_margin="25dp"
+                android:id="@+id/satisfactory"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/mood_nuetral"
+                android:layout_margin="25dp"
+                android:id="@+id/nuetral"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/mood_bad"
+                android:layout_margin="25dp"
+                android:id="@+id/sad"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/layout_express"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gradient2"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient2"
+                android:text="@string/back"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                style="?attr/buttonBarButtonStyle"
+                />
+            <Button
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient2"
+                android:text="@string/edit"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                style="?attr/buttonBarButtonStyle"/>
+            <Button
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient2"
+                style="?attr/buttonBarButtonStyle"
+                android:text="@string/submit"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
