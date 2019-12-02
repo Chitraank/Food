@@ -148,7 +148,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 break;
 
-            case R.id.nav_menu:    startActivity(new Intent(Dashboard.this, My_test.class));
+            case R.id.nav_menu:    startActivity(new Intent(Dashboard.this, Menu.class));
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 break;
 

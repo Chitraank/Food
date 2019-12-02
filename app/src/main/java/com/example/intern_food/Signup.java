@@ -5,19 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
+import android.widget.Button;
 
 public class Signup extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -27,86 +15,14 @@ public class Signup extends AppCompatActivity {
     DatabaseReference userRef= db.getReference().child("User");
     DatabaseReference test=FirebaseDatabase.getInstance().getReference();
 
+    Button signUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        mAuth= FirebaseAuth.getInstance();
-        Name=findViewById(R.id.name);
-        Email=findViewById(R.id.email);
-        Password=findViewById(R.id.password);
-        MobNo=findViewById(R.id.phone_num);
-        RollNo=findViewById(R.id.rno);
-        Branch=findViewById(R.id.branch);
-        Hostel=findViewById(R.id.hosteln);
-        RoomNo=findViewById(R.id.room_no);
-    }
-    public void signUp(View view)
-    {
-        name=Name.getText().toString();
-        email=Email.getText().toString();
-        password=Password.getText().toString();
-        mobNo=MobNo.getText().toString();
-        rollNo=RollNo.getText().toString();
-        branch=Branch.getText().toString();
-        hostel=Hostel.getText().toString();
-        roomNo=RoomNo.getText().toString();
 
-        if(!(email.isEmpty()||password.isEmpty()))
-        {
-            mAuth.createUserWithEmailAndPassword(email,password)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()) {
-                                Toast.makeText(Signup.this, "Sucessfully Signed Up", Toast.LENGTH_SHORT).show();
-                                addUserDatatoDB();
-                                startActivity(new Intent(Signup.this,Dashboard.class));
-                            }
-                            else
-                                Toast.makeText(Signup.this, "Error Signing Up"+task.getException(), Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-        }
-        else
-            Toast.makeText(this, "Invalid Fields", Toast.LENGTH_SHORT).show();
-
-
-
-
-    }
-    private void addUserDatatoDB() {
-        final HashMap<String,Object> userData=new HashMap<>();
-        userData.put("name",name);
-        userData.put("idLogin",email);
-        userData.put("Password",password);
-        userData.put("phoneNo",mobNo);
-        userData.put("idUserId",mAuth.getUid());
-        userData.put("rollNo",rollNo);
-        userData.put("branch",branch);
-        userData.put("hostel",hostel);
-        userData.put("roomNo",rollNo);
-
-        userRef.setValue("Hello");
-        userRef.child(mAuth.getUid()).updateChildren(userData).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(Signup.this, "Hi", Toast.LENGTH_SHORT).show();
-            }
-        })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Signup.this, e.toString(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-
-
-
-
-
-
+        signUp= findViewById(R.id.btn_sign_in);
+        Intent i = new Intent(Signup.this, Dashboard.class);
+        startActivity(i);
     }
 }

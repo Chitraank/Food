@@ -1,77 +1,64 @@
 package com.example.intern_food;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+import android.widget.Button;
 
 public class Meals extends AppCompatActivity {
-    FirebaseAuth mAuth;
-    private CheckBox BreakFast,Lunch,Snacks,Dinner;
-    private Boolean isBrkfst,isLnch,isSncks,isDinnr;
-    private HashMap<String,Object>mealSelect=new HashMap<>();
-    DatabaseReference mealref= FirebaseDatabase.getInstance().getReference().child("MealSelected");
+    Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meals);
-        mAuth=FirebaseAuth.getInstance();
-        BreakFast=findViewById(R.id.check_breakfast);
-        Lunch=findViewById(R.id.check_lunch);
-        Snacks=findViewById(R.id.check_snacks);
-        Dinner=findViewById(R.id.check_dinner);
 
+        submit= findViewById(R.id.submit_meals);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OnSubmit();
+            }
+        });
     }
 
-    public void addDataToHashMap(View view) {
-    if(BreakFast.isChecked())
-    {
-        mealSelect.put("breakfast",true);
-    }
-    else
-    {
-        mealSelect.put("breakfast",false);
-    }
-    if(Lunch.isChecked())
-        {
-            mealSelect.put("lunch",true);
-        }
-    else
-        {
-            mealSelect.put("lunch",false);
-        }
-    if(Snacks.isChecked())
-        {
-            mealSelect.put("snacks",true);
-        }
-    else
-        {
-            mealSelect.put("snacks",false);
-        }
-    if(Dinner.isChecked())
-        {
-            mealSelect.put("dinner",true);
-        }
-    else
-        {
-            mealSelect.put("dinner",false);
-        }
-        addDataToDb();
-    }
+    public void OnSubmit() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Meals.this);
+        builder.setMessage("Are you sure ?");
+        builder.setTitle("Alert");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
-    private void addDataToDb() {
+                             @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which)
+                            {
+                                Intent i = new Intent(Meals.this, Load.class);
+                                startActivity(i);
+                            }
+                        });
 
 
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
 
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which)
+                            {
+
+                                // If user click no
+                                // then dialog box is canceled.
+                                dialog.cancel();
+                            }
+                        });
+
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
 }

@@ -30,6 +30,7 @@ dependencies {
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'com.github.davidpizarro:autolabelui:1.0.1'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'com.google.firebase:firebase-auth:16.0.5'

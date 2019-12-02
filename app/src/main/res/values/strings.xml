@@ -9,7 +9,7 @@
     <string name="phone_no">Phone Number</string>
     <string name="employ_id">Employee ID</string>
     <string name="breakfast">Breakfast</string>
-    <string name="suggestions_text">Suggest!</string>
+    <string name="suggestions_text">Suggest</string>
     <string name="improve">Help Us Improve</string>
     <string name="suggestion_title">Enter a suggestion title</string>
     <string name="suggestions_content">Enter your suggestions</string>
@@ -23,7 +23,7 @@
     <string name="edit">edit</string>
     <string name="overall_experience">Overall Experience</string>
     <string name="feedback">Feedback</string>
-    <string name="good">Tell us what we are good at</string>
+    <string name="good">How good do we cook?</string>
     <string name="average">Average</string>
     <string name="lunch">Lunch</string>
     <string name="snacks">Snacks</string>
