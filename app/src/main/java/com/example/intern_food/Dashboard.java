@@ -115,10 +115,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         userref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot ds:dataSnapshot.getChildren())
-                {
-                    userClass=ds.getValue(UserClass.class);
-                }
+                UserClass userClass=dataSnapshot.child(mAuth.getUid()).getValue(UserClass.class);
 //                username=dataSnapshot.child(id).child("name").getValue().toString();
                 Name.setText(userClass.getName());
                 Hostel.setText(userClass.getHostel());
@@ -144,10 +141,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         userref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot ds:dataSnapshot.getChildren())
-                {
-                     userClass=ds.getValue(UserClass.class);
-                }
+                UserClass userClass=dataSnapshot.child(mAuth.getUid()).getValue(UserClass.class);
                 username=userClass.getName();
 //                username=dataSnapshot.child(id).child("name").getValue().toString();
                 textView.setText(username);
