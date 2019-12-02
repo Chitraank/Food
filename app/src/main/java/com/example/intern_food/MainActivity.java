@@ -30,8 +30,18 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, Sign_in_up.class);
-                startActivity(intent);
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+                if(currentUser!=null)
+                {
+                    Intent intent=new Intent(MainActivity.this,Dashboard.class);
+                    intent.putExtra("UserId",mAuth.getUid());
+                    startActivity(intent);
+                    // startActivity(new Intent(MainActivity.this,Dashboard.class));
+                }
+                else
+                {
+                    startActivity(new Intent(MainActivity.this,Sign_in_up.class));
+                }
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
             }
@@ -43,18 +53,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser!=null)
-        {
-            Intent intent=new Intent(MainActivity.this,Dashboard.class);
-            intent.putExtra("UserId",mAuth.getUid());
-            startActivity(intent);
-           // startActivity(new Intent(MainActivity.this,Dashboard.class));
-        }
-        else
-        {
-            startActivity(new Intent(MainActivity.this,Sign_in_up.class));
-        }
+
         // updateUI(currentUser);
     }
 }
