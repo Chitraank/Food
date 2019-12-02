@@ -268,6 +268,7 @@
             android:textSize="20sp"
             android:textColor="@color/white"
             android:layout_alignParentBottom="true"
+            android:layout_below="@+id/card_dinner"
             />
 
         <Button
@@ -282,6 +283,7 @@
             android:textColor="@color/white"
             android:layout_alignParentBottom="true"
             android:layout_toEndOf="@+id/edit_meals"
+            android:layout_below="@+id/card_dinner"
             />
 
     </RelativeLayout>

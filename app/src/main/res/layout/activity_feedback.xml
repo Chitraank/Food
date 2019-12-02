@@ -31,11 +31,10 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:text="@string/feedback"
             android:textColor="@color/white"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             />
 
 
@@ -46,7 +45,7 @@
             android:gravity="center_horizontal"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:textSize="25sp"
+            android:textSize="22sp"
             android:text="@string/good"
             android:textColor="@color/white"
             android:layout_below="@+id/feedback"
@@ -69,6 +68,7 @@
             android:layout_marginTop="10dp">
 
             <ImageView
+                android:contentDescription="@string/feedback"
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:src="@drawable/mood_bad_pink"
@@ -77,6 +77,7 @@
                 android:layout_margin="10dp"/>
 
             <ImageView
+                android:contentDescription="@string/feedback"
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:src="@drawable/mood_nuetral_pink"
@@ -85,6 +86,7 @@
                 android:layout_margin="10dp"/>
 
             <ImageView
+                android:contentDescription="@string/feedback"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_row="0"
@@ -97,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@color/peach"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="@string/breakfast"
                 android:layout_column="0"
@@ -109,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@color/peach"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="@string/lunch"
                 android:layout_column="0"
@@ -121,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@color/peach"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="@string/snacks"
                 android:layout_column="0"
@@ -133,12 +135,14 @@
                 android:layout_width="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@color/peach"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="@string/dinner"
                 android:layout_column="0"
                 android:layout_row="4"
                 android:layout_margin="10dp"/>
+
+
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -206,6 +210,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_column="3"/>
 
+
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -227,6 +232,7 @@
                 android:layout_row="4"
                 android:layout_gravity="center_horizontal"
                 android:layout_column="3"/>
+
         </GridLayout>
 
         <LinearLayout
@@ -277,6 +283,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_back"
                 android:layout_width="125dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/gradient2"
@@ -287,7 +294,9 @@
                 android:textAllCaps="true"
                 style="?attr/buttonBarButtonStyle"
                 />
+
             <Button
+                android:id="@+id/btn_edit"
                 android:layout_width="125dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/gradient2"
@@ -297,14 +306,18 @@
                 android:textColor="@color/white"
                 android:textAllCaps="true"
                 style="?attr/buttonBarButtonStyle"/>
+
             <Button
-                android:layout_width="125dp"
+                android:id="@+id/btn_submit"
+                android:layout_width="130dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/gradient2"
                 style="?attr/buttonBarButtonStyle"
                 android:text="@string/submit"
                 android:textStyle="bold"
                 android:textSize="18sp"
+                android:textAlignment="center"
+                android:gravity="center_vertical|center_horizontal"
                 android:textColor="@color/white"
                 android:textAllCaps="true"/>
 
