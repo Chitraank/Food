@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -46,6 +47,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     RecyclerView recyclerView;
     MealAdapter mealAdapter;
     String formattedDate;
+    ProgressDialog loadingbar;
 
 
 
@@ -54,6 +56,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         Hostel=findViewById(R.id.hostel_name);
+        loadingbar=new ProgressDialog(this);
         Name=findViewById(R.id.name);
         BranchM=findViewById(R.id.branch);
         recyclerView=findViewById(R.id.recycler_food_list);
@@ -99,6 +102,10 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         navigationView.setNavigationItemSelectedListener(this);
         getIntentValue();
+        loadingbar.setTitle("Loading Data");
+        loadingbar.setMessage("Please Wait");
+        loadingbar.setCanceledOnTouchOutside(false);
+        loadingbar.show();
         fetchDataForHomePage();
 
 
@@ -116,6 +123,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 Name.setText(userClass.getName());
                 Hostel.setText(userClass.getHostel());
                 BranchM.setText(userClass.getBranch());
+                loadingbar.dismiss();
             }
 
             @Override

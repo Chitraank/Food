@@ -39,6 +39,9 @@ public class Meals extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meals);
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+        formattedDate = df.format(c);
 
         BreakFast=findViewById(R.id.check_breakfast);
         Lunch=findViewById(R.id.check_lunch);
@@ -65,9 +68,28 @@ public class Meals extends AppCompatActivity {
                             public void onClick(DialogInterface dialog,
                                                 int which)
                             {
-                                addDataToHashMap();
-                                Intent i = new Intent(Meals.this, Load.class);
-                                startActivity(i);
+                                mealref.addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        if(dataSnapshot.child(mAuth.getUid()).child(formattedDate).exists())
+                                        {
+                                            Toast.makeText(Meals.this, "Already Selected", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(Meals.this,Dashboard.class));
+                                        }
+                                        else
+                                        {
+                                            addDataToHashMap();
+                                            Intent i = new Intent(Meals.this, Load.class);
+                                            startActivity(i);
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                    }
+                                });
+
                             }
                         });
 
@@ -92,9 +114,6 @@ public class Meals extends AppCompatActivity {
 
     private void addDataToHashMap() {
         int i=1;
-        Date c = Calendar.getInstance().getTime();
-        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
-        formattedDate = df.format(c);
 
         if(BreakFast.isChecked())
         {
