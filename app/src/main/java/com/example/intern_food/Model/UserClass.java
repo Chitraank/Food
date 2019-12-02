@@ -9,6 +9,7 @@ public class UserClass {
     private String hostel;
     private String roomNo;
     private String phoneNo;
+    private String imageuri;
 
     public UserClass() {
     }
