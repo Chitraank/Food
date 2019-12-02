@@ -87,7 +87,7 @@
                     android:textColorHint="@color/yellow"
                     android:textColor="@color/yellow"
                     android:inputType="text"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:hint="@string/suggestion_title"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -126,7 +126,7 @@
                     android:textColorHint="@color/yellow"
                     android:textColor="@color/yellow"
                     android:inputType="textMultiLine"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:hint="@string/suggestions_content"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -182,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="normal"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -194,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="normal"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -206,7 +206,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="normal"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -218,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="normal"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
