@@ -22,7 +22,7 @@
         android:src="@drawable/food3"/>
 
     <TextView
-        android:id="@+id/breakfast"
+        android:id="@+id/MealName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -45,7 +45,7 @@
         android:textStyle="normal"
         android:textSize="18sp"
         android:text="11:00AM"
-        android:layout_below="@+id/breakfast"
+        android:layout_below="@+id/MealName"
         android:layout_toEndOf="@+id/image_food"
         android:layout_marginTop="50dp"/>
 

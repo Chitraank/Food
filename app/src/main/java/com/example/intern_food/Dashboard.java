@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.intern_food.Adapter.MealAdapter;
+import com.example.intern_food.Model.Meal;
 import com.example.intern_food.Model.UserClass;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +27,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,8 +40,12 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     private TextView textView,Roll,Branch,Hostel,Name,BranchM;
     DatabaseReference userref= FirebaseDatabase.getInstance().getReference("User");
     String username,rollno,branch,currentUserID;
-    private FirebaseAuth mAuth;
+    private FirebaseAuth mAuth=FirebaseAuth.getInstance();
     UserClass userClass;
+    List<Meal> mealList;
+    RecyclerView recyclerView;
+    MealAdapter mealAdapter;
+    String formattedDate;
 
 
 
@@ -43,6 +56,33 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         Hostel=findViewById(R.id.hostel_name);
         Name=findViewById(R.id.name);
         BranchM=findViewById(R.id.branch);
+        recyclerView=findViewById(R.id.recycler_food_list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mealList=new ArrayList<>();
+        DatabaseReference mealref=FirebaseDatabase.getInstance().getReference("MealSelected");
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+        formattedDate = df.format(c);
+
+        mealref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds:dataSnapshot.child(mAuth.getUid()).child(formattedDate).getChildren())
+                {
+                Meal meal=ds.getValue(Meal.class);
+                mealList.add(meal);
+                }
+                mealAdapter=new MealAdapter(Dashboard.this,mealList);
+                recyclerView.setAdapter(mealAdapter);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
