@@ -20,6 +20,7 @@
         android:layout_marginTop="20dp"/>
 
     <Button
+        android:onClick="tSignIn"
         android:id="@+id/button_sign_in"
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -35,6 +36,7 @@
         android:layout_marginTop="60dp"/>
 
     <Button
+        android:onClick="tSignUp"
         android:id="@+id/button_sign_up"
         android:layout_width="match_parent"
         android:layout_height="80dp"

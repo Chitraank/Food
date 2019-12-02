@@ -352,6 +352,7 @@
             android:layout_below="@+id/layout_room_no"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
+            android:onClick="signUp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"
             android:layout_alignParentStart="true"

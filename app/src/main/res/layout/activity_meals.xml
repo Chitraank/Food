@@ -256,5 +256,22 @@
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+        <Button
+            android:onClick="addDataToHashMap"
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_dinner"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/gradient_round"
+            android:text="@string/save"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 </ScrollView>
