@@ -1,13 +1,15 @@
 package com.example.intern_food;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.view.ViewCompat;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -15,13 +17,15 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT =5000;
     private FirebaseAuth mAuth;
+    ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LinearLayout linearLayout = findViewById(R.id.main_layout);
+        logo=findViewById(R.id.logo);
+        RelativeLayout linearLayout = findViewById(R.id.main_layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
         animationDrawable.setEnterFadeDuration(1000);
         animationDrawable.setExitFadeDuration(2000);
@@ -34,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 if(currentUser!=null)
                 {
                     Intent intent=new Intent(MainActivity.this,Dashboard.class);
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, logo, ViewCompat.getTransitionName(logo));
                     intent.putExtra("UserId",mAuth.getUid());
-                    startActivity(intent);
+                    startActivity(intent, options.toBundle());
                     // startActivity(new Intent(MainActivity.this,Dashboard.class));
                 }
                 else
