@@ -28,7 +28,7 @@ import java.util.Objects;
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
-    private TextView textView,Roll,Branch;
+    private TextView textView,Roll,Branch,Hostel,Name,BranchM;
     DatabaseReference userref= FirebaseDatabase.getInstance().getReference("User");
     String username,rollno,branch,currentUserID;
     private FirebaseAuth mAuth;
@@ -40,6 +40,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        Hostel=findViewById(R.id.hostel_name);
+        Name=findViewById(R.id.name);
+        BranchM=findViewById(R.id.branch);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -56,8 +59,30 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         navigationView.setNavigationItemSelectedListener(this);
         getIntentValue();
+        fetchDataForHomePage();
 
 
+    }
+
+    private void fetchDataForHomePage() {
+        userref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds:dataSnapshot.getChildren())
+                {
+                    userClass=ds.getValue(UserClass.class);
+                }
+//                username=dataSnapshot.child(id).child("name").getValue().toString();
+                Name.setText(userClass.getName());
+                Hostel.setText(userClass.getHostel());
+                BranchM.setText(userClass.getBranch());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void getIntentValue() {
