@@ -1,113 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    tools:context=".Suggestions">
 
-    <ImageView
-        android:id="@+id/image"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:src="@drawable/path3" />
+        android:layout_height="wrap_content">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_pic"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/profile" />
-
-    <LinearLayout
-        android:id="@+id/layout_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_pic"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/person_white" />
-
-        <TextView
-            android:id="@+id/name"
+        <View
+            android:id="@+id/main_view"
             android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/gradient2" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:contentDescription="@string/suggestions_text"
+            android:src="@drawable/profile" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_details"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="100dp"
-            android:gravity="center_horizontal"
-            android:padding="20dp"
-            android:text="SANCHI RASTOGI"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:orientation="vertical"
+           android:layout_centerHorizontal="true"
+            >
 
-    <LinearLayout
-        android:id="@+id/layout_hostel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_name"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/layout_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/home_white" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/person_white" />
 
-        <TextView
-            android:id="@+id/hostel_name"
-            android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="SANCHI RASTOGI"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_hostel"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:padding="20dp"
-            android:text="SAROJINI"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            >
 
-    <LinearLayout
-        android:id="@+id/layout_branch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_hostel"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/home_white" />
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/branch" />
+            <TextView
+                android:id="@+id/hostel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="SAROJINI"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/branch"
+        <LinearLayout
+            android:id="@+id/layout_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/branch" />
+
+            <TextView
+                android:id="@+id/branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="CSE"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_food_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:padding="20dp"
-            android:text="CSE"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:layout_below="@+id/profile_pic"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="80dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_food_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image"
-        android:layout_marginTop="10dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/recycler_food_list"
+            android:background="@drawable/gradient2" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="400dp"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/suggestions_text"
+            android:src="@drawable/food3" />
+
+    </RelativeLayout>
+</ScrollView>

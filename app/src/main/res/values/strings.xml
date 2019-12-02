@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Food_intern</string>
+    <string name="app_name">Food Saviour</string>
     <string name="user_details">Enter user details</string>
     <string name="signup">Sign Up</string>
     <string name="signin">Sign In</string>
@@ -72,4 +72,9 @@
     <string name="logout">Logout</string>
     <string name="dwarf_start">DWARFSTAR STUDIOS</string>
     <string name="home">Home</string>
+    <string name="student_id">Student ID</string>
+    <string name="review_avg">Average</string>
+    <string name="review_good">Good</string>
+    <string name="review_del">Delicious</string>
+    <string name="tagline">Saving the craving for future</string>
 </resources>

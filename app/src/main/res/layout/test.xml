@@ -9,47 +9,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-                <View
-                    android:id="@+id/main_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:background="@drawable/gradient2"/>
+<!--        <View-->
+<!--            android:id="@+id/main_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:background="@drawable/gradient2"/>-->
 
-                <ImageView
-                    android:id="@+id/logo"
-                    android:contentDescription="@string/feedback"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="200dp"
-                    android:src="@drawable/food3"/>
-                <TextView
-                    android:id="@+id/feedback"
-                    android:layout_width="match_parent"
-                    android:gravity="center_horizontal"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="false"
-                    android:textStyle="bold"
-                    android:textSize="30sp"
-                    android:text="@string/feedback"
-                    android:textColor="@color/white"
-                    android:layout_marginTop="50dp"
-                    />
+<!--        <ImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:contentDescription="@string/feedback"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="200dp"-->
+<!--            android:src="@drawable/food3"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/feedback"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="30sp"-->
+<!--            android:text="@string/feedback"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            />-->
 
 
-                <TextView
-                    android:id="@+id/good"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:textAllCaps="false"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:text="@string/good"
-                    android:textColor="@color/white"
-                    android:layout_below="@+id/feedback"
-                    android:layout_alignParentEnd="true"
-                    />
+<!--        <TextView-->
+<!--            android:id="@+id/good"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="22sp"-->
+<!--            android:text="@string/good"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_below="@+id/feedback"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            />-->
         <androidx.cardview.widget.CardView
             android:id="@+id/card_breakfast_item"
             android:layout_below="@+id/logo"

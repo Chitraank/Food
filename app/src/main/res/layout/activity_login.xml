@@ -77,10 +77,10 @@
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColorHint="@color/yellow"
-                android:textColor="@color/yellow"
+                android:textColor="@color/peach"
                 android:inputType="textEmailAddress"
                 android:textSize="18sp"
-                android:hint="@string/employ_id"/>
+                android:hint="@string/student_id"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <LinearLayout
@@ -114,8 +114,7 @@
                 android:id="@+id/password"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:textColorHint="@color/yellow"
-                android:textColor="@color/yellow"
+                android:textColor="@color/peach"
                 android:inputType="textPassword"
                 android:textSize="18sp"
                 android:hint="@string/pswrd"/>
