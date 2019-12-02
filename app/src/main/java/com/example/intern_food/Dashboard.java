@@ -89,7 +89,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         });
     }
 
-    public void signOut(View view) {
+    public void signOut() {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(Dashboard.this,Sign_in_up.class));
     }
@@ -114,6 +114,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
             case R.id.nav_dashboard:
                 fetchUserDetails();
+                break;
+            case R.id.nav_logout:
+                signOut();
                 break;
 
             case R.id.nav_meals:   startActivity(new Intent(Dashboard.this, Meals.class));
