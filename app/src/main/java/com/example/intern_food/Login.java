@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
     EditText Email, Password;
     String email, password;
-    private FirebaseAuth mAuth;
+    private FirebaseAuth mAuth=FirebaseAuth.getInstance();
 
 
     Button signIn;
@@ -30,6 +30,8 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         signIn= findViewById(R.id.btn_sign_in);
+        Email=findViewById(R.id.email);
+        Password=findViewById(R.id.password);
     }
     public void signIn(View view)
     {
