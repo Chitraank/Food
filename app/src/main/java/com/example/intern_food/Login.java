@@ -1,5 +1,6 @@
 package com.example.intern_food;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,6 +11,10 @@ import android.widget.Button;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class Login extends AppCompatActivity {
+    EditText Email, Password;
+    String email, password;
+    private FirebaseAuth mAuth;
+
 
     Button signIn;
 

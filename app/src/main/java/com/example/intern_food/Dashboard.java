@@ -10,12 +10,31 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
+import com.example.intern_food.Model.UserClass;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Objects;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    private TextView textView,Roll,Branch;
+    DatabaseReference userref= FirebaseDatabase.getInstance().getReference("User");
+    String username,rollno,branch,currentUserID;
+    private FirebaseAuth mAuth;
+    UserClass userClass;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +53,45 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
         navigationView.setNavigationItemSelectedListener(this);
+        getIntentValue();
+
+
+    }
+
+    private void getIntentValue() {
+        if(getIntent().hasExtra("UserId"))
+        {
+            currentUserID=getIntent().getStringExtra("UserId");
+        }
+    }
+
+    public void fetchUserDetails() {
+        userref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds:dataSnapshot.getChildren())
+                {
+                     userClass=ds.getValue(UserClass.class);
+                }
+                username=userClass.getName();
+//                username=dataSnapshot.child(id).child("name").getValue().toString();
+                textView.setText(username);
+                Roll.setText(userClass.getRollNo());
+                Branch.setText(userClass.getBranch());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public void signOut(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(Dashboard.this,Sign_in_up.class));
     }
 
     @Override
@@ -47,11 +104,16 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         }
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        textView=findViewById(R.id.user_name);
+        Roll=findViewById(R.id.user_rno);
+        Branch=findViewById(R.id.user_branch);
         switch (item.getItemId()){
 
             case R.id.nav_dashboard:
+                fetchUserDetails();
                 break;
 
             case R.id.nav_meals:   startActivity(new Intent(Dashboard.this, Meals.class));
@@ -69,9 +131,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             case R.id.nav_suggestions:      startActivity(new Intent(Dashboard.this, Suggestions.class));
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 break;
-
-//            case R.id.nav_logout:
         }
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

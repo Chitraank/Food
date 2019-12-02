@@ -273,6 +273,7 @@
 
         <Button
             android:id="@+id/submit_meals"
+            android:onClick="addDataToHashMap"
             android:layout_width="210dp"
             android:layout_height="60dp"
             android:background="@drawable/gradient2"
