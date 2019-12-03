@@ -11,9 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.intern_food.Adapter.MealAdapter;
@@ -27,6 +29,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -47,6 +50,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     RecyclerView recyclerView;
     MealAdapter mealAdapter;
     String formattedDate;
+    ImageView profilepic;
     ProgressDialog loadingbar;
 
 
@@ -58,6 +62,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         Hostel=findViewById(R.id.hostel_name);
         loadingbar=new ProgressDialog(this);
         Name=findViewById(R.id.name);
+        profilepic=findViewById(R.id.profile_pic1);
         BranchM=findViewById(R.id.branch);
         recyclerView=findViewById(R.id.recycler_food_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -120,6 +125,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 Name.setText(userClass.getName());
                 Hostel.setText(userClass.getHostel());
                 BranchM.setText(userClass.getBranch());
+                Picasso.get().load(Uri.parse(userClass.getImageuri())).into(profilepic);
                 loadingbar.dismiss();
             }
 
@@ -145,6 +151,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 username=userClass.getName();
 //                username=dataSnapshot.child(id).child("name").getValue().toString();
                 textView.setText(username);
+
                 Roll.setText(userClass.getRollNo());
                 Branch.setText(userClass.getBranch());
             }
