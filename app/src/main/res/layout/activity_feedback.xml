@@ -11,8 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-
         <View
             android:id="@+id/main_view"
             android:layout_width="match_parent"
@@ -411,6 +409,7 @@
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_below="@+id/card_dinner_item"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="-43dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="16dp"
