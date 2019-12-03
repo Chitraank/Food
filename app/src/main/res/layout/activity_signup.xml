@@ -68,11 +68,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:textColor="@color/yellow"
-                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -108,8 +108,8 @@
                     android:inputType="textEmailAddress"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:textColor="@color/yellow"
-                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -144,11 +144,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/pswrd"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPassword"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:textColor="@color/yellow"
-                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -181,11 +181,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/phone_no"
-                    android:inputType="textEmailAddress"
+                    android:inputType="phone"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:textColor="@color/yellow"
-                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -218,11 +218,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/rno"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:textColor="@color/yellow"
-                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
+                    android:textAllCaps="true"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -255,11 +256,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/branch"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:textColor="@color/yellow"
-                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
+                    android:textAllCaps="true"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -292,11 +294,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hostel"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:textColor="@color/yellow"
-                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -329,11 +331,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/room_no"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
+                    android:textAllCaps="true"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    android:textColor="@color/yellow"
-                    android:textColorHint="@color/yellow"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

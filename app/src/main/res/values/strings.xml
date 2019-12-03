@@ -77,4 +77,5 @@
     <string name="review_good">Good</string>
     <string name="review_del">Delicious</string>
     <string name="tagline">Saving the craving for future</string>
+    <string name="edit_">Edit Response</string>
 </resources>
