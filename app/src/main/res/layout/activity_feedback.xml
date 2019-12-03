@@ -99,6 +99,7 @@
                     android:layout_below="@+id/breakfast"
                     android:layout_toEndOf="@+id/gif_breakfast"
                     android:layout_width="match_parent"
+                    android:id="@+id/brGrp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:orientation="vertical">
@@ -189,6 +190,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
+                    android:id="@+id/lnGrp"
                     android:orientation="vertical">
 
                     <RadioButton
@@ -275,6 +277,7 @@
                     android:layout_toEndOf="@+id/gif_snack"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/sngrp"
                     android:layout_marginBottom="20dp"
                     android:orientation="vertical">
 
@@ -360,11 +363,14 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
-                    android:layout_below="@+id/dinner"
-                    android:layout_toEndOf="@+id/gif_dinner"
+                    android:id="@+id/dngrp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/dinner"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginBottom="20dp"
+                    android:layout_toEndOf="@+id/gif_dinner"
                     android:orientation="vertical">
 
                     <RadioButton
@@ -411,6 +417,7 @@
         <com.spark.submitbutton.SubmitButton
             android:id="@+id/submit_feedback"
             android:layout_width="150dp"
+            android:onClick="submitFeedback"
             android:layout_height="80dp"
             android:layout_below="@+id/card_dinner_item"
             android:layout_marginTop="-43dp"

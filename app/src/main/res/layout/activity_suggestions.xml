@@ -271,6 +271,7 @@
                 android:id="@+id/happy"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:onClick="happy"
                 android:layout_margin="20dp"
                 android:contentDescription="@string/suggestions_text"
                 android:src="@drawable/mood_happy" />
@@ -279,6 +280,7 @@
             <ImageView
                 android:id="@+id/satisfactory"
                 android:layout_width="50dp"
+                android:onClick="satis"
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
                 android:contentDescription="@string/suggestions_text"
@@ -289,6 +291,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
+                android:onClick="neut"
                 android:contentDescription="@string/suggestions_text"
                 android:src="@drawable/mood_nuetral" />
 
@@ -297,6 +300,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
+                android:onClick="sad"
                 android:contentDescription="@string/suggestions_text"
                 android:src="@drawable/mood_bad" />
 
@@ -342,6 +346,7 @@
                 android:id="@+id/btn_submit"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:onClick="submitSuggestions"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_centerHorizontal="true"
