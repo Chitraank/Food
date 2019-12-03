@@ -37,48 +37,48 @@ public class Feedback extends AppCompatActivity {
         snacks = findViewById(R.id.card_snack_item);
         dinner = findViewById(R.id.card_dinner_item);
 
-
-        brkfast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadFragment(new FeedbackFragment());
-
-            }
-        });
-
-        lunch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                loadFragment(new FeedbackFragment());
-            }
-        });
-
-        snacks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadFragment(new FeedbackFragment());
-
-            }
-        });
-
-        dinner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadFragment(new FeedbackFragment());
-
-            }
-        });
-
-    }
-
-    private void loadFragment(Fragment fragment) {
-// create a FragmentManager
-        FragmentManager fm = getFragmentManager();
-// create a FragmentTransaction to begin the transaction and replace the Fragment
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-// replace the FrameLayout with new Fragment
-        fragmentTransaction.replace(R.id.feedback_fragment, fragment);
-        fragmentTransaction.commit(); // save the changes
+//
+//        brkfast.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                loadFragment(new FeedbackFragment());
+//
+//            }
+//        });
+//
+//        lunch.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                loadFragment(new FeedbackFragment());
+//            }
+//        });
+//
+//        snacks.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                loadFragment(new FeedbackFragment());
+//
+//            }
+//        });
+//
+//        dinner.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                loadFragment(new FeedbackFragment());
+//
+//            }
+//        });
+//
+//    }
+//
+//    private void loadFragment(Fragment fragment) {
+//// create a FragmentManager
+//        FragmentManager fm = getFragmentManager();
+//// create a FragmentTransaction to begin the transaction and replace the Fragment
+//        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+//// replace the FrameLayout with new Fragment
+//        fragmentTransaction.replace(R.id.feedback_fragment, fragment);
+//        fragmentTransaction.commit(); // save the changes
     }
 }

@@ -23,12 +23,6 @@
             android:name=".Sign_in_up"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Menu_items"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Menu"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Meals"
             android:screenOrientation="portrait" />
         <activity
