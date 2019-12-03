@@ -112,7 +112,7 @@
             android:id="@+id/recycler_food_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_pic"
+            android:layout_below="@+id/profile_pic1"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="80dp" />
 
@@ -129,7 +129,7 @@
             android:layout_height="150dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="400dp"
+            android:layout_marginBottom="100dp"
             android:contentDescription="@string/suggestions_text"
             android:src="@drawable/food3" />
 
