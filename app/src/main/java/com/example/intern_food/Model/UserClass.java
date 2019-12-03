@@ -14,7 +14,7 @@ public class UserClass {
     public UserClass() {
     }
 
-    public UserClass(String idUserId, String idLogin, String name, String rollNo, String branch, String hostel, String roomNo, String phoneNo) {
+    public UserClass(String idUserId, String idLogin, String name, String rollNo, String branch, String hostel, String roomNo, String phoneNo, String imageuri) {
         this.idUserId = idUserId;
         this.idLogin = idLogin;
         this.name = name;
@@ -23,6 +23,7 @@ public class UserClass {
         this.hostel = hostel;
         this.roomNo = roomNo;
         this.phoneNo = phoneNo;
+        this.imageuri = imageuri;
     }
 
     public String getIdUserId() {
@@ -31,6 +32,14 @@ public class UserClass {
 
     public void setIdUserId(String idUserId) {
         this.idUserId = idUserId;
+    }
+
+    public String getImageuri() {
+        return imageuri;
+    }
+
+    public void setImageuri(String imageuri) {
+        this.imageuri = imageuri;
     }
 
     public String getIdLogin() {
