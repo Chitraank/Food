@@ -23,26 +23,20 @@
             android:name=".Sign_in_up"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Menu_items"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Menu"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Meals"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Login"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Feedback"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Dashboard"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Feedback"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

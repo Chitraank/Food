@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Feedback">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -412,7 +416,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-43dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginStart="16dp"
+            android:layout_centerHorizontal="true"
             android:text="@string/submit"
             android:textAllCaps="true"
             android:textColor="@color/white"
@@ -424,14 +428,16 @@
             app:sub_btn_ripple_color="@color/peach"
             app:sub_btn_tick_color="@color/white" />
 
-       <com.google.android.material.floatingactionbutton.FloatingActionButton
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@id/card_dinner_item"
-           android:layout_toEndOf="@+id/submit_feedback"
-           android:layout_marginStart="16dp"
-           android:background="@drawable/round_button_fill"
-           android:layout_marginTop="20dp"
-           android:src="@drawable/home_white"/>
+
     </RelativeLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/home_white"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
