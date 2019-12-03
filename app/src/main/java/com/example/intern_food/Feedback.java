@@ -1,5 +1,6 @@
 package com.example.intern_food;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
