@@ -16,6 +16,8 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import tyrantgit.explosionfield.ExplosionField;
+
 public class Login extends AppCompatActivity {
     EditText Email, Password;
     String email, password;
@@ -23,11 +25,13 @@ public class Login extends AppCompatActivity {
 
 
     Button signIn;
+    ExplosionField mExplosionField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        mExplosionField = ExplosionField.attach2Window(this);
 
         signIn= findViewById(R.id.btn_sign_in);
         Email=findViewById(R.id.email);
@@ -35,6 +39,7 @@ public class Login extends AppCompatActivity {
     }
     public void signIn(View view)
     {
+        mExplosionField.explode(view);
         email=Email.getText().toString();
         password=Password.getText().toString();
 

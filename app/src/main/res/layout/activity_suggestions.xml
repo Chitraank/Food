@@ -304,17 +304,17 @@
             android:background="@drawable/gradient2"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_back"
-                style="?attr/buttonBarButtonStyle"
-                android:layout_width="125dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient2"
-                android:text="@string/back"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+<!--            <Button-->
+<!--                android:id="@+id/btn_back"-->
+<!--                style="?attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="125dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@drawable/gradient2"-->
+<!--                android:text="@string/back"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold" />-->
 
             <Button
                 android:id="@+id/btn_edit"

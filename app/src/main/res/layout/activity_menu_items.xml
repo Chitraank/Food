@@ -263,29 +263,29 @@
     </androidx.cardview.widget.CardView>
 
 
-    <Button
-        android:id="@+id/back_btn"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/gradient2"
-        android:text="@string/back"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+<!--    <Button-->
+<!--        android:id="@+id/back_btn"-->
+<!--        android:layout_width="210dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@drawable/gradient2"-->
+<!--        android:text="@string/back"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold" />-->
 
-    <Button
-        android:id="@+id/home_btn"
-        android:layout_width="210dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/back_btn"
-        android:background="@drawable/gradient2"
-        android:text="@string/home"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+<!--    <Button-->
+<!--        android:id="@+id/home_btn"-->
+<!--        android:layout_width="210dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_toEndOf="@+id/back_btn"-->
+<!--        android:background="@drawable/gradient2"-->
+<!--        android:text="@string/home"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold" />-->
 
 </RelativeLayout>
