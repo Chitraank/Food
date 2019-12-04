@@ -40,8 +40,9 @@
                 android:gravity="top"
                 android:text="@string/breakfast"
                 android:textAllCaps="true"
-                android:textColor="@color/peach"
-                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/rambla_bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -56,8 +57,9 @@
                 android:gravity="top"
                 android:text="@string/item_1"
                 android:textAllCaps="false"
-                android:textColor="@color/peach"
-                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:textSize="22sp"
+                android:fontFamily="@font/rajdhani_semibold"
                 android:textStyle="normal" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -95,8 +97,9 @@
                 android:gravity="top"
                 android:text="@string/lunch"
                 android:textAllCaps="true"
-                android:textColor="@color/peach"
-                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/rambla_bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -111,8 +114,9 @@
                 android:gravity="top"
                 android:text="@string/item_2"
                 android:textAllCaps="false"
-                android:textColor="@color/peach"
-                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:textSize="22sp"
+                android:fontFamily="@font/rajdhani_semibold"
                 android:textStyle="normal" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -150,8 +154,9 @@
                 android:gravity="top"
                 android:text="@string/snacks"
                 android:textAllCaps="true"
-                android:textColor="@color/peach"
-                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/rambla_bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -166,8 +171,9 @@
                 android:gravity="top"
                 android:text="@string/item_3"
                 android:textAllCaps="false"
-                android:textColor="@color/peach"
-                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:textSize="22sp"
+                android:fontFamily="@font/rajdhani_semibold"
                 android:textStyle="normal" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -205,8 +211,9 @@
                 android:gravity="top"
                 android:text="@string/dinner"
                 android:textAllCaps="true"
-                android:textColor="@color/peach"
-                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/rambla_bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -221,8 +228,9 @@
                 android:gravity="top"
                 android:text="@string/item_4"
                 android:textAllCaps="false"
-                android:textColor="@color/peach"
-                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:textSize="22sp"
+                android:fontFamily="@font/rajdhani_semibold"
                 android:textStyle="normal" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

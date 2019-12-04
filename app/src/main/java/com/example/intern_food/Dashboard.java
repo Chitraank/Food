@@ -58,6 +58,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
         Hostel=findViewById(R.id.hostel_name);
         loadingbar=new ProgressDialog(this);
         Name=findViewById(R.id.name);

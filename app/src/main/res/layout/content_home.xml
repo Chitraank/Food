@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="40dp"
-    tools:context=".Suggestions">
+    tools:context=".Dashboard">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -41,8 +41,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/person_white" />
 
@@ -54,7 +54,8 @@
                     android:text="SANCHI RASTOGI"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/rambla_bold"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -66,8 +67,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/home_white" />
 
@@ -79,7 +80,8 @@
                     android:text="SAROJINI"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/rambla_bold"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -91,8 +93,8 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/branch" />
 
@@ -104,7 +106,8 @@
                     android:text="CSE"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/rambla_bold"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>

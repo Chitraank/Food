@@ -32,11 +32,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/pompiere"
             android:gravity="center_horizontal"
             android:text="@string/meals"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="40sp"
+            android:textSize="50sp"
             android:textStyle="bold" />
 
 
@@ -46,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/feedback"
             android:layout_alignParentEnd="true"
+            android:fontFamily="@font/rajdhani_semibold"
             android:gravity="center_horizontal"
             android:text="@string/select_meal"
             android:textAllCaps="false"
@@ -84,9 +86,10 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
                     android:layout_toEndOf="@+id/image_food"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:text="@string/breakfast"
                     android:textAllCaps="false"
-                    android:textColor="@color/peach"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal" />
 
@@ -134,9 +137,10 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
                     android:layout_toEndOf="@+id/image_lunch"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:text="@string/lunch"
                     android:textAllCaps="false"
-                    android:textColor="@color/peach"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal" />
 
@@ -184,9 +188,10 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
                     android:layout_toEndOf="@+id/image_snacks"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:text="@string/snacks"
                     android:textAllCaps="false"
-                    android:textColor="@color/peach"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal" />
 
@@ -235,9 +240,10 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
                     android:layout_toEndOf="@+id/image_dinner"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:text="@string/dinner"
                     android:textAllCaps="false"
-                    android:textColor="@color/peach"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal" />
 

@@ -34,10 +34,11 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="70dp"
+            android:fontFamily="@font/rambla_bold"
             android:text="@string/signup"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -73,7 +74,8 @@
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -110,7 +112,8 @@
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -149,7 +152,8 @@
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -186,7 +190,8 @@
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -224,6 +229,19 @@
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
                     android:textAllCaps="true"
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hosteln"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hostel"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/peach"
+                    android:textColorHint="@color/grey"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -262,7 +280,8 @@
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
                     android:textAllCaps="true"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -290,16 +309,19 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/hosteln"
+                    android:id="@+id/hostel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hostel"
                     android:inputType="text"
+                    android:textAllCaps="true"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp"/>
+
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -337,7 +359,8 @@
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 

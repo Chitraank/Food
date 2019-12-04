@@ -36,11 +36,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:fontFamily="@font/pompiere"
             android:gravity="center_horizontal"
             android:text="@string/suggestions_text"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <TextView
@@ -49,11 +50,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/suggest"
             android:layout_alignParentEnd="true"
+            android:fontFamily="@font/rajdhani_semibold"
             android:gravity="center_horizontal"
             android:text="@string/improve"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -89,7 +91,8 @@
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -126,7 +129,8 @@
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+                    android:fontFamily="@font/rajdhani_semibold"
+                    android:textSize="22sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -161,7 +165,8 @@
                 android:text="@string/issue_type"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="25sp"
+                android:fontFamily="@font/rambla_bold"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -184,7 +189,8 @@
                 android:text="@string/cleanliness"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:fontFamily="@font/rajdhani_semibold"
                 android:textStyle="normal" />
 
             <RadioButton
@@ -196,7 +202,8 @@
                 android:text="@string/staff"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:fontFamily="@font/rajdhani_semibold"
                 android:textStyle="normal" />
 
             <RadioButton
@@ -208,7 +215,8 @@
                 android:text="@string/food_quality"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:fontFamily="@font/rajdhani_semibold"
                 android:textStyle="normal" />
 
             <RadioButton
@@ -220,7 +228,8 @@
                 android:text="@string/ambience"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:fontFamily="@font/rajdhani_semibold"
                 android:textStyle="normal" />
         </RadioGroup>
 
@@ -255,7 +264,8 @@
                 android:text="@string/overall_experience"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="25sp"
+                android:fontFamily="@font/rambla_bold"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -360,7 +370,8 @@
                 app:sub_btn_duration="3000"
                 app:sub_btn_line_color="@color/peach"
                 app:sub_btn_ripple_color="@color/peach"
-                app:sub_btn_tick_color="@color/white" />
+                app:sub_btn_tick_color="@color/white"
+                />
 
 
     </RelativeLayout>

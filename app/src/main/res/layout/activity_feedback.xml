@@ -35,11 +35,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:fontFamily="@font/pompiere"
             android:gravity="center_horizontal"
             android:text="@string/feedback"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
 
@@ -50,6 +51,7 @@
             android:layout_below="@+id/feedback"
             android:layout_alignParentEnd="true"
             android:gravity="center_horizontal"
+            android:fontFamily="@font/rajdhani_semibold"
             android:text="@string/good"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -87,12 +89,13 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:layout_toEndOf="@+id/gif_breakfast"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="@string/breakfast"
                     android:textAllCaps="true"
                     android:textColor="@color/peach"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -113,7 +116,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_avg"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
 
@@ -125,7 +128,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_good"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
 
@@ -137,7 +140,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_del"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
                 </RadioGroup>
@@ -179,9 +182,10 @@
                     android:layout_toEndOf="@+id/gif_lunch"
                     android:gravity="center_vertical"
                     android:text="@string/lunch"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:textAllCaps="true"
                     android:textColor="@color/peach"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -201,7 +205,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_avg"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
 
@@ -213,7 +217,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_good"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
 
@@ -225,7 +229,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_del"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
                 </RadioGroup>
@@ -267,9 +271,10 @@
                     android:layout_toEndOf="@+id/gif_snack"
                     android:gravity="center_vertical"
                     android:text="@string/snacks"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:textAllCaps="true"
                     android:textColor="@color/peach"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -289,7 +294,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_avg"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
 
@@ -301,7 +306,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_good"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
 
@@ -313,7 +318,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_del"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
                 </RadioGroup>
@@ -359,7 +364,8 @@
                     android:text="@string/dinner"
                     android:textAllCaps="true"
                     android:textColor="@color/peach"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -368,7 +374,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/dinner"
                     android:layout_marginStart="0dp"
-                    android:layout_marginTop="25dp"
                     android:layout_marginBottom="20dp"
                     android:layout_toEndOf="@+id/gif_dinner"
                     android:orientation="vertical">
@@ -381,7 +386,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_avg"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
 
@@ -393,7 +398,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_good"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
 
@@ -405,7 +410,7 @@
                         android:paddingEnd="10dp"
                         android:text="@string/review_del"
                         android:textAllCaps="false"
-                        android:textColor="@color/peach"
+                        android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="normal" />
                 </RadioGroup>
