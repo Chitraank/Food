@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -18,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT =5000;
     private FirebaseAuth mAuth;
     ImageView logo;
+//    TextView app_name, tag_line;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +25,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         logo=findViewById(R.id.logo);
+//        app_name=findViewById(R.id.text);
+//        tag_line= findViewById(R.id.text_tag);
+
         RelativeLayout linearLayout = findViewById(R.id.main_layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
         animationDrawable.setEnterFadeDuration(1000);
         animationDrawable.setExitFadeDuration(2000);
         animationDrawable.start();
+
+
 
         new Handler().postDelayed(new Runnable() {
             @Override

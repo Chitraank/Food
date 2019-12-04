@@ -232,17 +232,7 @@
                     android:fontFamily="@font/rajdhani_semibold"
                     android:textSize="22sp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/hosteln"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hostel"
-                    android:inputType="text"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:textColor="@color/peach"
-                    android:textColorHint="@color/grey"
-                    android:textSize="18sp" />
+
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -309,18 +299,16 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/hostel"
+                    android:id="@+id/hosteln"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hostel"
                     android:inputType="text"
-                    android:textAllCaps="true"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
                     android:textColor="@color/peach"
                     android:textColorHint="@color/grey"
-                    android:fontFamily="@font/rajdhani_semibold"
-                    android:textSize="22sp"/>
+                    android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

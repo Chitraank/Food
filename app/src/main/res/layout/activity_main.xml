@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:fontFamily="@font/pompiere"
+        android:fontFamily="@font/wellfleet"
         android:text="@string/app_name"
         android:textAllCaps="true"
         android:textColor="@color/white"
@@ -41,7 +41,7 @@
         android:text="@string/tagline"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:textStyle="italic" />
 
 
